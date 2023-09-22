@@ -12,4 +12,3 @@ request(url, (error, response, body) => {
   // Print the status code
   console.log(`code: ${response.statusCode}`);
 });
-
