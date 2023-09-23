@@ -23,4 +23,3 @@ request.get(apiUrl, (error, response) => {
   });
   console.log(completedTasksByUser);
 });
-
