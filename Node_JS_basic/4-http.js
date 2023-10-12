@@ -1,14 +1,12 @@
 const http = require('http');
 
 // Create an HTTP server
-const app = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Holberton School!\n');
-});
-
-// Listen on port 1245
-app.listen(1245);
-
-module.exports = app;
-
+const server = http.createServer((_, response) => {
+  // Send a text as the response body to the client
+  response.write('Hello Holberton School!');
+  // End of the response. No more data can be written
+  response.end();
+  // The server is listening on port 1245 for incoming HTTP requests
+}).listen(1245);
+// Export the 'server' object
+module.exports = server;
